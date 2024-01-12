@@ -10,6 +10,8 @@ namespace Support
         public string Response { get; set; }
         public string Accept { get; set; }
         public string Host { get; set; }
+        public string Referer { get; set; }
+        public string Useragent { get; set; }
         public WebProxy Proxy { get; set; }
 
         public GetRequest(string address)
@@ -47,6 +49,8 @@ namespace Support
             _request.Proxy = Proxy;
             _request.Accept = Accept;
             _request.Host = Host;
+            _request.UserAgent = Useragent;
+            _request.Referer = Referer;
 
             foreach(var item in Headers)
             {

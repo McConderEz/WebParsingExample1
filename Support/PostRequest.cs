@@ -12,6 +12,8 @@ namespace Support
         public string Accept { get; set; }
         public string Host { get; set; }
         public string ContentType { get; set; }
+        public string Referer { get; set; }
+        public string Useragent { get; set; }
         public string Data { get; set; }
         public WebProxy Proxy { get; set; }
 
@@ -51,6 +53,8 @@ namespace Support
             _request.Accept = Accept;
             _request.Host = Host;
             _request.ContentType = ContentType;
+            _request.Referer = Referer;
+            _request.UserAgent = Useragent;
 
             byte[] sendData = Encoding.UTF8.GetBytes(Data); 
             _request.ContentLength = sendData.Length;
